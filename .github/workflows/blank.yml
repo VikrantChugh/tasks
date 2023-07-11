@@ -43,6 +43,8 @@ jobs:
         run: terraform plan
       - name: terraform apply 
         run: terraform apply -auto-approve
+      - name: git
+        run: git init
       - name: Create local changes
         run: |
           git add .
@@ -51,9 +53,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git commit -a -m "Add changes"
+          git remote add origin https://github.com/VikrantChugh/neww.git
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.AWS_TOKENs }}
-          branch: "mains"
+          branch: "master"
       
