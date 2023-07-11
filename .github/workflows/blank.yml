@@ -45,7 +45,7 @@ jobs:
         run: terraform apply -auto-approve
       - name: Create local changes
         run: |
-          ...
+          git add .
       - name: Commit files
         run: |
           git config --local user.email "vikrantchughimp@gmail.com"
