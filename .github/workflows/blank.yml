@@ -43,4 +43,17 @@ jobs:
         run: terraform plan
       - name: terraform apply 
         run: terraform apply -auto-approve
+      - name: Create local changes
+        run: |
+          ...
+      - name: Commit files
+        run: |
+          git config --local user.email "vikrantchughimp@gmail.com"
+          git config --local user.name "VikrantChugh"
+          git commit -a -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.AWS_TOKEN }}
+          branch: [ "master" ]
       
