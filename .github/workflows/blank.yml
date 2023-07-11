@@ -43,8 +43,8 @@ jobs:
         run: terraform plan
       - name: terraform apply 
         run: terraform apply -auto-approve
-      - name: git
-        run: git init
+      # - name: git
+      #   run: git init
       - name: Create local changes
         run: |
           git add .
