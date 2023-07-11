@@ -46,12 +46,12 @@ jobs:
       # - name: git
       #   run: git init
       - name: Create local changes
-        run: |
-          git add .
+        run: actions/checkout@v2
       - name: Commit files
         run: |
           git config --local user.email "Vikrantchughimp@gmail.com"
           git config --local user.name "VikrantChugh"
+          git add .
           git commit -a -m "Add changes"
           git push
   
