@@ -55,5 +55,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.AWS_TOKEN }}
-          branch: [ "master" ]
+          branch: "master"
       
