@@ -50,7 +50,7 @@ jobs:
           git add .
       - name: Commit files
         run: |
-          git config --local user.email "Vikrantchugimp@gmail.com"
+          git config --local user.email "Vikrantchughimp@gmail.com"
           git config --local user.name "VikrantChugh"
           git commit -a -m "Add changes"
           git push
