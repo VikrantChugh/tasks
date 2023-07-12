@@ -52,11 +52,11 @@ jobs:
           git config --local user.name "VikrantChugh"
           git add .
           git commit -a -m "Add changes"
-          git push
+          
   
-      # - name: Push changes
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.AWS_TOKENs }}
-      #     branch: "master"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.AWS_TOKENs }}
+          branch: "master"
       
