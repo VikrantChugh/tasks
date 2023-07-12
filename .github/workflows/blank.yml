@@ -54,9 +54,18 @@ jobs:
           git commit -a -m "Add changes"
           
   
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.AWS_TOKENs }}
-          branch: "master"
+      # - name: Push changes
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.AWS_TOKENs }}
+      #     branch: "master"
       
+       - name: Pushing to production branch
+         uses: actions-js/push@master
+           with:
+             github_token: ${{ secrets.AWS_TOKENs }}
+             branch: production
+             message: Minified css, js and html
+             author_name: vikrant
+             author_email: vikrantchughimp@gmail.com
+             force: true
