@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: vikrants
+      - name: vikrant
         uses: actions/checkout@v2
       - name: download terraform
         uses: hashicorp/setup-terraform@v2
@@ -37,7 +37,7 @@ jobs:
       # - name: git
       #   run: git init
       
-      - name: Commit files
+      - name: Commit file
         run: |
           git config --local user.email "Vikrantchughimp@gmail.com"
           git config --local user.name "VikrantChugh"
