@@ -25,7 +25,7 @@ jobs:
       - name: vikrant
         uses: actions/checkout@v2
         with: 
-          repository: tasks
+          repository: VikrantChugh/tasks
           ref: 'master'
           token: ${{ secrets.TOKEN_GITHUB }}
       - name: download terraform
